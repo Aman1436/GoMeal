@@ -21,6 +21,16 @@ const userSchema=new mongoose.Schema({
         type:String,
         enum:['user','owner','deliveryBoy'],
         required:true,
+    },
+    isVerified:{
+        type:Boolean,
+        default:false,
+    },
+    resetPasswordToken:{
+        type:String,
+    },
+    resetPasswordExpire:{
+        type:Date,
     }
 },{timestamps:true});
 
